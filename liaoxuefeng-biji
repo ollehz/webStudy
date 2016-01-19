@@ -28,6 +28,156 @@
                 注意：
                   if(start<0);则start=str.length+start;
                   if(length<=0);则返回一个空字符串;
+                  if(length没有指定，那么length=str.length);
+                  当截取到最后一个，就不再截取了；
+  数组：可以包含任意数据类型，并通过索引来访问每个元素。
+    定义数组的： var newArr = []; //定义
+                 var newArr = new array();
+                 newArr[0] = "first";// 初始化
+                 ...
+                 
+                 var newArr = ['first','second','third'];//直接定义并且初始化
+                 var newArr = new array('first','second','third');
+                 二维数组:
+                    var zArr = [[1,2,3],[4,5,6],[7,8,9]];
+                    
+                    var zArr = new Array();
+                     for(var i=0;i<10;i++){
+                        zArr[i] = new Array();
+                        for(var j=0;j<20;j++){
+                          zArr[i][j]="";
+                        }
+                     }
+                     zArr[0][0]="html";
+                     zArr[0][1]="css";
+                     
+    arr.length;//直接访问length属性
+    给arr.length赋一个新值会改变Array的大小变化(未赋值的会变为'undefined')；可以对Array的索引进行赋值 会直接修改这个Array;
+      var z = [1,2,3];
+      z[0] = 4;
+      arr; //[4,2,3];
+    indexOf()来搜索一个指定位置的元素；
+      z.indexOf(2); //返回1，如果没有找到元素就返回-1
+    slice()截取Array的部分元素，返回一个新的Array;
+      slice()截取的新数组包含起始的索引不不含结束的索引；
+      如果不给传递任何参数就从头到位的截取所以元素；
+    push()向Array的末尾添加若干元素，pop()把末尾的最后一个元素删掉； （都有返回数组）
+    unshift()向Array的头部添加若干元素，shift()把Array的第一个元素删掉； （都有返回数组）
+    sort()把当前的Array进行排序，按照默认顺序排序调整位置；(根据字符串的排序方式["a","A",1,"281",55]→[1,281,55,A,a])
+    reverse()把Array位置顺序反转；
+    splice() 可以从指定的索引开始删除若干元素，然后从该位置添加若干元素；
+      删除：2个参数，要删除的第一项的位置和要删除的项数；
+      插入：至少3个参数，起始的位置，第二个参数0和要插入的项；
+      替换：至少3个参数，起始的位置（第一个被删除的项），第二个参数删除的项数和要插入的项；
+    concat()把当前的Array和另一个Array连接起来，并返回一个新的Array；  
+    join()把当前Array的每个元素用指定的字符串连接起来，然后返回连接后的字符串；
+                  测试test：
+                    var arr = [[1,2,3],[400,500,600],'—']；
+                    var x = arr.[1][1];
+                    alert(x);//返回500
+                    
+                    var arr = ["html","css","javascript","jquery"];
+                    输出显示：学习html,css,javascript以及jquery!
+                    var z = ["html","css","javascript","jquery"];
+	                  document.write("</br>学习"+z.slice(0,z.length-1)+"以及"+z.pop()+"!");
+	对象：是一种无序的集合数据类型，由若干个键值对组成。
+	    例子：var car = {
+	            /*属性：值,*/
+	             牌子:"大众",
+	             颜色:"blue",
+	             类型:"轿车"
+	          }
+	    用{....}表示对象，键值对用xxx:xxx  形式声明，用","隔开。最后一个不用","。
+	    通过'.'来访问属性及属性值。
+	    如果属性名中有特殊的字符，var d={'middle-school':'YuanQing Middle School'}
+	                                  d['middle-school'];//返回YuanQing Middle School
+	    如果访问一个不存在的属性会返回undefined;
+	    因为javascript的对象是动态类型，可以自由的给一个对象添加或删除属性，
+	        var z = {
+	          color:'red',
+	          width:50
+	        }
+	        //增加属性
+	        z.height = 25;
+	        //删除属性
+	        delete z.width;
+	     如果要检测z是否拥有某一属性，可以用in操作符：
+	        'height' in z;//true
+	        'width' in z;//false
+	     要判断一个属性是否是自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法。
+	     不懂~~~~~~~~~~
+	     因为toString定义在object对象中，而所有对象最终都会在原型链上指向object,所以z也拥有toString属性。
+	
+	条件判断:
+	if(){
+	  /*代码段*/
+	}else{
+	  /*代码段*/
+	}  
+	else是可选的。
+	  注意，只要满足一个条件，后面的条件就不再进行判断了。
+	  javascript把 null ， undefined ， 0 ， NaN 和 空字符串 视为false；其他值都是true；
+	  
+	循环：
+	for循环，for(初始条件；判断条件；符合条件后参数的取值,不满足就跳出) {
+	  循环体
+	}
+	for in {
+	  /*可以把一个对象的所有属性依次循环出来*/
+	}
+	for 循环在已知循环的初始条件和结束条件时非常有用~
+  while循环
+      while循环只有一个判断条件，条件满足，不断循环，不满足条件就退出循环。
+      var n = 0;
+      while(n>0){
+      /*循环体*/
+      }
+      
+      do...while是在完成循环体后进行条件判断~
+      var n = 0;
+      do {
+        n=n+1;
+      }while(n<100);
+      
+	函数   javascript的函数也是一个对象。
+	  函数的定义和调用
+    	  function abs(x){   //function指出这是一个函数定义，abs是函数的名称，(x)括号内列出函数的参数，多个参数以','分隔。{...}是函数体
+    	    if(x>0){      
+    	      return x;
+    	    }else{
+    	      return -x;
+    	    }
+    	  }
+    	  函数体内部的语句在执行时，一旦执行到return时，函数就执行完毕，并将结果返回。
+    	  第二种定义函数的方式：
+    	  var abs = function(x){
+    	    if(x>0){
+    	      return x;
+    	    }else {
+    	      return -x;
+    	    }
+    	  };
+    	  
+    	  /*javascript异常处理http://www.cnblogs.com/aqbyygyyga/archive/2011/10/29/2228824.html*/
+    	  !!!!!!!!!!arguments是一个javascript赠送的免费关键字，只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。
+    	常用于判断传入参数的个数。
+    	//foo(a[,b],c)
+    	//接受2~3个参数,b是可选参数,如果只传2个参数,b默认为null；
+    	function foo(a,b,c) {
+    	  if (arguments.length ===2){
+    	    //实际上拿到的参数是a和b，c为undefined;
+    	    c = b;
+    	    b = null;
+    	  }
+    	}
+    	  !!!!!!!!!!rest参数
+    	  
+                    
+                    
+                    
+      
+                
+                 
                   
                   
                   
