@@ -1,0 +1,37 @@
+字符串：  用""或''包起来的字符表示字符串;‘\’使用来转义的；
+常见字符串操作： 
+  1:  
+    var z = "hello, world";
+    获取字符串长度： 
+        z.length: //return 12;
+    字符串的索引是从 零 开始的;获取某个指定位置的字符，用类似Array的下标操作;
+        z[11];  //return d;
+        z[12];  //return undefined 不会报错;
+    字符串是不可改变的    需要用字符串方法String.replace()方法/*http://www.jb51.net/article/28009.htm*/或正则表达式;
+        如下 var s = "Text";
+            s[0] = "X";
+            return s;//s仍然为'Text'
+    常用方法：toUpperCase()和toLowerCase();
+              indexOf()会制定字符串出现的位置;当没有找到指定的字符串，返回-1；
+              s.indexOf('e'); //返回1；
+              
+              substring()返回指定索引区间的字符串；/*例子：http://m.oschina.net/blog/392485*/
+                substring(start,end)；2个参数第一个必选，第二个可选；切都是非负的整数，如果是负数的话就变为0；
+                返回值是包含start和end-1的区间内所有字符；
+                注意：
+                  if(start==end) //返回空字符串；
+                  if(start>end)  //则start和end值互换；
+                  if(start<0||end<0)  //则会被替换为0；
+                  
+              substr()返回一个从指定位置开始的指定长度的字符串;
+                substr(start [,lenght]);  start必选，length可选；
+                注意：
+                  if(start<0);则start=str.length+start;
+                  if(length<=0);则返回一个空字符串;
+                  
+                  
+                  
+              
+              
+              
+    
