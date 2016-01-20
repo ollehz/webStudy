@@ -4,3 +4,6 @@ http://45.78.24.170/QunShare      teJb4V5EBIT
 
 资料：
 http://www.codeceo.com/article/5-useful-javascript-libs.html 前端工程师都会喜欢的5个JavaScript库
+
+
+携程ued：http://ued.ctrip.com/blog/category/front-end-development
