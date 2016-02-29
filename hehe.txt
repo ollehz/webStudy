@@ -21,3 +21,5 @@ http://caibaojian.com/ 前端报
 http://www.orzzone.com/ 编辑魔方
 
 <a href="http://course.tuicool.com/" target="_blank">推酷</a>
+
+www.dowebok.com  jq效果
