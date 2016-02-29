@@ -2,6 +2,6 @@
 初学
 
 
-<a href="http://ollehz.github.io/webStudy/zjuhuasuan/index.html" target="_blank">juhuasuan</a></br>
-<a href="http://ollehz.github.io/webStudy/haoxinwangluo/index.html" target="_blank">haoxinwagnluo</a></br>
+<a href="http://ollehz.github.io/webStudy/zjuhuasuan/index.html" target="_blank">仿聚划算首页</a></br>
+<a href="http://ollehz.github.io/webStudy/haoxinwangluo/index.html" target="_blank">仿好信网络首页</a></br>
 
