@@ -29,3 +29,4 @@ http://www.whycss.com/#J2  前端圈
 前端导航  http://caibaojian.com/links?wb
 http://www.iwan0.com/index.html 前端很多网址
 https://www.awesomes.cn/  各种js库
+http://javascript.ruanyifeng.com/grammar/basic.html   //2016-4-8ruanyf
